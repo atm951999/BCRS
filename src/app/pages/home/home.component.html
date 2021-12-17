@@ -1,0 +1,80 @@
+<!--
+============================================
+; Title: Bobs Computer Repair Shop
+; Author: Professor Krasso
+; Date: 27 November 2021
+; Modified By: Angela Martin, Alex Haefner & Sarah Jean Baptiste
+; Description: Home Component
+===========================================
+-->
+
+<!-- Card to hold all content-->
+<mat-card class="large-card">
+
+  <!-- Title-->
+  <h1 class="title">Services</h1>
+
+ <!-- Shop items -->​
+  <mat-grid-list
+   cols="4"
+   rowHeight="30vh"
+   style="width: 90%;"
+   gutterSize="1em"
+  >
+   <!-- Card for all items-->
+   <mat-grid-tile *ngFor = "let service of services">
+     <mat-card class="example-card">
+       <mat-card-title-group>
+         <mat-card-title> {{ service.name }}</mat-card-title>
+         <mat-card-subtitle>
+          {{ service.description }}
+          </mat-card-subtitle>
+       </mat-card-title-group>
+
+       <mat-card-content>
+        <img class="image" src= "{{ service.image }}"/>
+        <div>
+          <mat-checkbox [(ngModel)] = "service.selected"  class="button-price" type="checkbox">
+            {{ service.value | currency }}
+          </mat-checkbox>
+        </div>
+       </mat-card-content>
+     </mat-card>
+   </mat-grid-tile>
+ ​​
+  <!-- Card for parts and labor-->
+   <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Parts & Labor</mat-card-title>
+      </mat-card-title-group>
+
+      <mat-card-content>
+        <form>
+        <mat-form-field class="form" appearance="standard">
+          <mat-label>Parts:</mat-label>
+          <input matInput [(ngModel)]="partsAmount" type="number" name="partsField">
+          <mat-hint>Enter dollar amount</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="form" appearance="standard">
+          <mat-label>Labor Hours:</mat-label>
+          <input matInput [(ngModel)]="laborAmount" type="number" name="laborField">
+          <mat-hint>Charged at $50/hour</mat-hint>
+        </mat-form-field>
+      </form>
+      </mat-card-content>
+    </mat-card>
+
+  </mat-grid-tile>
+ </mat-grid-list>
+
+ <!-- View Invoice and Submit button-->
+  <div>
+    <button class="submit-button" mat-button (click)="openDialog()">View Invoice and Submit</button>
+  </div>
+
+</mat-card>
+
+
+​

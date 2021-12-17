@@ -1,0 +1,102 @@
+/*
+============================================
+; Title: Bobs Computer Repair Shop
+; Author: Professor Krasso
+; Date: 27 November 2021
+; Modified By: Angela Martin, Alex Haefner & Sarah Jean Baptiste
+; Description: Home Component
+===========================================
+*/
+
+.large-card{
+  width: 65%;
+  position: fixed;
+  top: 50%;
+  left: 49.7%;
+  transform: translate(-50%, -50%);
+  background-color: #e2ddd8;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1.5%;
+}
+
+.example-card {
+  background-color: #f2efeb;
+  height: 84%;
+  width: 90%;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family:'Abhaya Libre', serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-family:'Castoro', serif;
+  margin-bottom: 35px;
+}
+
+button{
+  font-family:'Castoro', serif;
+  margin-left: 4px;
+}
+
+.button-price{
+  position: absolute;
+  top: 85%;
+  margin-left: 10px;
+  font-family:'Abhaya Libre', serif;
+  font-size: 16px;
+}
+
+.form{
+  width: 100%;
+  font-family:'Abhaya Libre', serif;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+mat-hint{
+  font-size: 12px;
+}
+
+.submit-button{
+  width: 40%;
+  padding: 10px;
+  margin-top: 10px;
+  left: 30%;
+  background-color: #6c4656;
+  font-size: 20px;
+  color: #f2efeb;
+}
+
+.image{
+  filter: grayscale(100%);
+  margin-top: 20%;
+  float: right;
+  width: 36%;
+  height: auto;
+}
+
+.add-to-cart{
+  position: absolute;
+  top: 80%;
+}
+
+mat-grid-list {
+  padding-left: 10%;
+  margin-top: -3%;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+  opacity: 0.03 !important;
+  background-color: #6e5945!important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #6e5945;
+}
+
+::ng-deep .mat-button.mat-accent .mat-button-focus-overlay {
+  background-color: transparent !important;
+}
