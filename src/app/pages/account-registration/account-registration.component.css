@@ -40,12 +40,12 @@
 
 /* change the color of the mat-step-icon */
 ::ng-deep .mat-step-icon {
-  background-color: #6c5c47 !important;
+  background-color: #6c4656 !important;
 }
 
 /* Change the color of the mat-step-icon when selected */
 ::ng-deep .mat-step-icon-selected {
-  background-color: #6c4656 !important;
+  background-color: #cdb2bd !important;
 }
 
 ::ng-deep.mat-form-field-ripple {
@@ -56,12 +56,12 @@
  ::ng-deep .mat-focused .mat-form-field-label {
   /*change color of label*/
   color: #6c4656 !important;
-  caret-color:#6c4656;
+  caret-color:#6c4656 !important;
  }
 
 /* Change the color of the focused carat */
 ::ng-deep .mat-focused .input {
-  caret-color:#6c4656;
+  caret-color:#6c4656 !important;
 }
 
 button {
